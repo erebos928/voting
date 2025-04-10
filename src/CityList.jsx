@@ -10,7 +10,7 @@ function CityList({ cities: initialCities }) { // Rename prop to initialCities
     // Here you would also call your API to delete the city from the server
   };
 
-  const cardsPerPage = 4;
+  const cardsPerPage = 8;
 
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
