@@ -1,4 +1,4 @@
-const prepareRows = require("./utils.");
+const {prepareRows} = require("./utils.");
 describe('prepareRows',()=>{
     const cities = [
         { name: 'City 1', id: 1 },
@@ -16,10 +16,10 @@ describe('prepareRows',()=>{
         let result = prepareRows('ZZZ',1);
         expect(result.error).toBe('Cities prop is not an array.');
       });
-      test('handles invalid cities prop', () => {
+      test('handle', () => {
         let result = prepareRows(cities,1);
-        expect(result).toHaveLength(2);
-        expect(result[0]).toHaveLength(4);
-        expect(result[1]).toHaveLength(4);
+        expect(result.rows).toHaveLength(2);
+        expect(result.rows[0]).toHaveLength(4);
+        expect(result.rows[1]).toHaveLength(4);
       });
 })

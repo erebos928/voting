@@ -16,4 +16,5 @@ function prepareRows(cities,pageNum){
   }
 return {rows:rows,maxPages:maxPages};    
 }
+//module.exports={prepareRows};
 export default prepareRows;
